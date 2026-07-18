@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Списки</title>
+    <style>
+        ul 
+        {
+            list-style: none;
+            /*list-style: circle;*/
+            /*list-style-image: url("bitcoin.ico");*/
+            /*list-style-image:circle url("bitcoin.ico") inside;*/
+        }
+        ul > li 
+        {
+            position: relative;
+            padding-left: 30px; /* Отступ слева, чтобы место под маркер было */
+        }
+        ul > li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%; /* Вертикальное выравнивание по центру строки */
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-image: url('bitcoin.ico');
+            background-size: contain; /* Масштабируем, чтобы картинка целиком влезла без искажений */
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Списки</h1>
+    <h2>Маркированный список</h2>
+    <ul>
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+        <li>Элемент 4</li>
+        <li>Элемент 5</li>
+    </ul>
+    <h2>Нумерованный список</h2>
+    <ol start="10">
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+        <li>Элемент 4</li>
+        <li>Элемент 5</li>
+    </ol>
+    <h2>Список определений</h2>
+    <dl>
+        <dt><code>&lt;ul&gt;</code>(UnorderedList) &#8213; </dt><dd>Маркированный список;</dd>
+        <dt><code>&lt;ol&gt;</code>(OrderedList) &#8213; </dt><dd>Нумерованный список;</dd>
+        <dt><code>&lt;dl&gt;</code>(DefinitionList) &#8213; </dt><dd>Список определений;</dd>
+    </dl>
+    <code>&lt;li&gt;</code>(ListItem) &#8213;Элемент списка;
+    <code>&lt;dt&gt;</code>(DescriptionTerm) &#8213;Понятие;
+    <code>&lt;dd&gt;</code>(DescriptionDetails) &#8213;Определение;
+</body>
+</html>
