@@ -40,3 +40,62 @@ ol ul       /*В конструкцию <ol> вложена другая кон�
 {
     list-style:none;
 }
+.img-lists {
+    list-style: none;
+}
+.img-li {
+    position: relative;
+    margin-bottom: 16px;
+    margin-left: 50px;
+    text-indent: -50px;
+    line-height: 38px;
+}
+    .img-li::before {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background-image: url("markers/markers1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td
+{
+    border-bottom: 1px solid #ccc;
+    bor
+}
+td
+{
+    text-align: center;
+}
+.processor
+{
+    text-align: left;
+}
+.processor-groups
+{
+    text-align: left;
+    font-style: italic;
+}
+.note
+{
+    border-left-color: #ccc;
+    border-left-style: solid;
+    border-left-width: 5px;
+    margin-left: 40px;
+    padding-left: 20px;
+    font-style: italic;
+    text-align:justify;
+}
+.superscalar
+{
+    list-style: decimal;
+    line-height: 40px;
+}
