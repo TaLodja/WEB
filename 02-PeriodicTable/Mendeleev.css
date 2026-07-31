@@ -1,0 +1,102 @@
+﻿body
+{
+    font-family:sans-serif;
+    font-size:16px;
+}
+table
+{
+    width: 100%;
+    border: solid 4px;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+tr table
+{
+    border:hidden;
+}
+.element
+{
+    border:hidden;
+}
+th, td
+{
+    border: solid 2px;
+    text-align:center;
+    overflow:hidden;
+}
+th
+{
+    font-size:20px;
+}
+thead th
+{
+    font-size:28px;
+    border:solid 4px;
+}
+.s
+{
+    background-color: #FF6600;
+}
+.p
+{
+    background-color: #FFFF66;
+}
+.d
+{
+    background-color: #00CCFF;
+}
+.f
+{
+    background-color: #CCFF66;
+}
+.ch-element, .levels
+{
+    transition:opacity 0.2s ease, transform 0.2s ease;
+}
+.periodic-table:has(.ch-element:hover) .ch-element,
+.periodic-table:has(.levels:hover) .ch-element
+{
+    opacity:0.3;
+}
+.periodic-table:has(.nonmetal:hover) .nonmetal,
+.periodic-table:has(.noble-gas:hover) .noble-gas,
+.periodic-table:has(.alkali-metal:hover) .alkali-metal,
+.periodic-table:has(.alcaline-earth-metal:hover) .alcaline-earth-metal,
+.periodic-table:has(.transition-metal:hover) .transition-metal,
+.periodic-table:has(.post-transition-metal:hover) .post-transition-metal,
+.periodic-table:has(.semi-metal:hover) .semi-metal,
+.periodic-table:has(.lanthanoides:hover) .lanthanoides,
+.periodic-table:has(.actinoides:hover) .actinoides
+{
+    opacity:1;
+    color:darkred;
+}
+.periodic-table:has(.levels:hover) .levels
+{
+    opacity: 0.3;
+}
+.periodic-table:has(.s:hover) .s,
+.periodic-table:has(.p:hover) .p,
+.periodic-table:has(.d:hover) .d,
+.periodic-table:has(.f:hover) .f {
+    opacity: 1;
+}
+figure
+{
+    width:100%;
+    text-align:left;
+}
+.levels
+{
+    border:hidden;
+    text-align:left;
+    font-size:18px;
+}
+.groups
+{
+    border:hidden;
+    font-size:32px;
+    text-decoration-color:red;
+    overflow:hidden;
+    height:70px;
+}
