@@ -30,7 +30,7 @@ th
 }
 thead th
 {
-    font-size:28px;
+    font-size:24px;
     border:solid 4px;
 }
 .s
@@ -84,7 +84,7 @@ figure
 {
     border: hidden;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration-color:red;
     overflow:hidden;
 }
