@@ -49,14 +49,14 @@ thead th
 {
     background-color: #CCFF66;
 }
-.ch-element, .levels
+.ch-element, levels
 {
-    transition:opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .periodic-table:has(.ch-element:hover) .ch-element,
 .periodic-table:has(.levels:hover) .ch-element
 {
-    opacity:0.3;
+    opacity: 0.3;
 }
 .periodic-table:has(.nonmetal:hover) .nonmetal,
 .periodic-table:has(.noble-gas:hover) .noble-gas,
@@ -66,31 +66,27 @@ thead th
 .periodic-table:has(.post-transition-metal:hover) .post-transition-metal,
 .periodic-table:has(.semi-metal:hover) .semi-metal,
 .periodic-table:has(.lanthanoides:hover) .lanthanoides,
-.periodic-table:has(.actinoides:hover) .actinoides
+.periodic-table:has(.actinoides:hover) .actinoides,
+.periodic-table:has(.s-levels:hover) .s,
+.periodic-table:has(.p-levels:hover) .p,
+.periodic-table:has(.d-levels:hover) .d,
+.periodic-table:has(.f-levels:hover) .f 
 {
-    opacity:1;
-    color:darkred;
-}
-.periodic-table:has(.levels:hover) .levels
-{
-    opacity: 0.3;
-}
-.periodic-table:has(.s:hover) .s,
-.periodic-table:has(.p:hover) .p,
-.periodic-table:has(.d:hover) .d,
-.periodic-table:has(.f:hover) .f {
     opacity: 1;
+    color: darkred;
 }
 figure
 {
     width:100%;
     text-align:left;
 }
-.levels
+.levels 
 {
-    border:hidden;
-    text-align:left;
-    font-size:18px;
+    border: hidden;
+    text-align: center;
+    font-size: 22px;
+    text-decoration-color:red;
+    overflow:hidden;
 }
 .groups
 {
