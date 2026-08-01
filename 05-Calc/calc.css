@@ -4,7 +4,8 @@
 #id {
 }
 
-.class {
+.class 
+{
 }
 
 body {
@@ -57,7 +58,8 @@ body {
 {
     margin: 8px;
 }
-.control-button {
+.control-button
+{
     width: 28px;
     height: 28px;
     background-color: rgb(39,104,249);
@@ -69,9 +71,76 @@ body {
         inset -2px -1px 5px 0px #0000BB;
 
     font-size:22px;
+
+    /*display:inline-flex;
+    justify-content:center;
+    align-items:center;*/
+}
+    .control-button div {
+        position: relative;
+        left: -4px;
+        top: -5px;
+        /*margin-left: -4px;
+        margin-top: -5px;*/
+    }
+.close-button div 
+{
+    left: -2px;
+    top: -3px;
+}
+.close-button {
+    background-color: rgb(226, 84, 30);
+    box-shadow: 
+        inset 5px 2px 7px 0px #FFCCCC, 
+        inset -2px -1px 7px 0px darkred;
+}
+.control-button:hover
+{
+    background-image:linear-gradient(
+        to bottom right, 
+        rgb(189,189,249), 
+        rgb(39,104,249),
+        rgb(149,149,249)
+        );
+}
+.control-button:active
+{
+    background-image:none;
+    background-color:rgb(50,50,200);
+    box-shadow:
+        inset -3px -1px 7px 0px #2288FF,
+        inset 4px 2px 5px 0px #000088;
+}
+.close-button:hover 
+{
+    background-image: linear-gradient( 
+        to bottom right, 
+        rgb(220,177,157), 
+        rgb(255,77,57), 
+        rgb(220,177,157) 
+    );
+}
+.close-button:active 
+{
+    background-image: none;
+    background-color: rgb(220,77,57);
+    box-shadow: 
+        inset -3px -1px 7px 0px #FF8888, 
+        inset 4px 2px 5px 0px #770000;
+}
+.control-button[disabled], .control-button[disabled]:hover, .control-button[disabled]:active
+{
+    background-image:none;
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    background-color:#2768E8;
+    box-shadow: 
+        inset 3px 1px 7px 0px #2288FF,
+        inset -2px -1px 5px 0px #0000BB;
 }
 /* /////////////////////////////////////////////////////////// */
-.client-rect {
+.client-rect 
+{
     background-color: rgb(235, 233, 216);
     height: 262px;
 }
