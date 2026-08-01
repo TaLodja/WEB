@@ -1,0 +1,77 @@
+﻿descriptor {
+}
+
+#id {
+}
+
+.class {
+}
+
+body {
+    background-image: url("bliss.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-attachment:fixed;*/
+}
+
+.main-window {
+    width: 400px;
+    height: 300px;
+    font-family: Tahoma;
+}
+
+.title-bar {
+    height: 38px;
+    background-color: blue;
+    color: white;
+    text-shadow: 1px 1px 2px darkblue;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(12, 75, 188),
+        rgb(44, 140, 250), 
+        rgb(3, 92, 231),
+        rgb(3, 92, 231),
+        rgb(3, 92, 231),
+        rgb(5, 107, 253),
+        rgb(5, 107, 253),
+        rgb(5, 107, 253)
+        );
+    box-shadow:inset -2px -3px 8px 0px darkblue;
+}
+
+.title-bar, .icon-and-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .title-bar img 
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+.window-control-buttons 
+{
+    margin: 8px;
+}
+.control-button {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(39,104,249);
+    color: white;
+    border: solid 1px white;
+    border-radius: 6px;
+    box-shadow:
+        inset 3px 2px 7px 0px #99CCFF,
+        inset -2px -1px 5px 0px #0000BB;
+
+    font-size:22px;
+}
+/* /////////////////////////////////////////////////////////// */
+.client-rect {
+    background-color: rgb(235, 233, 216);
+    height: 262px;
+}

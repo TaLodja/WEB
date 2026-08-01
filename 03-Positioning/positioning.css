@@ -1,0 +1,33 @@
+﻿body 
+{
+
+}
+h1
+{
+    position:sticky;
+    left:0px;
+    top:0px;
+    background-color:Highlight;
+    color:white;
+}
+/*img
+{
+    position:absolute;*/ /*Положение относительно начала координат страницы*/
+/*left:0px;
+    top:0px;
+}*/
+/*img 
+{
+    position: relative;*/ /*Положение относительно текущего полжения картинки*/
+/*left: 100px;
+    top: 10px;
+}*/
+img 
+{
+    position: fixed; /*Зафиксированное положение на странице*/
+    left: 100px;
+    top: 10px;
+    z-index: -1; /*Слои*/
+
+    filter:blur(48px);
+}
