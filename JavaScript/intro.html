@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction to Javascript</title>
+    <style>
+        code {
+            color: blue;
+            font-family: 'Courier New';
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>Введение</summary>
+        <h1>Introduction to Javascript</h1>
+        <p>
+            <strong>JavaScript</strong> &#8213; это интерпретируемый язык программирования общего назначения с динамической типизацией данных.
+        </p>
+        <p>
+            <strong>Интерпретируемый</strong> значит, что программа выполняется в исходном виде, т.е. исходный код не преобразуется в машинный или промежуточный код. В связи с этим, ошибок на этапе компиляции и компоновки отсутствуют, есть только ошибки на этапе выполнения.
+        </p>
+        <p>
+            <strong>Динамическая типизация</strong> говорит о том, что тип переменных и констант определяется во время присваивания по типу значения справа (r-value)<br>l-value = r-value.
+        </p>
+    </details>
+    <details>
+        <summary>Переменные и типы данных</summary>
+        <h2>Переменные и константы</h2>
+        <dl>
+            <dt><code style="color:blue">var</code></dt>
+            <dd>Объявляет глобальную переменную, несмотря на область видимости, в которой она объявлена. Если записать значение в несуществующую переменную, то это не вызовет ошибку, это будет аналогично ключевому слову ‘<code>var</code>’</dd>
+            <dt><code style="color:blue">let</code></dt>
+            <dd>Объявляет локальную переменную только для той области видимости, в которой она используется</dd>
+            <dt><code style="color:blue">const</code></dt>
+            <dd>Объявляет константу. Константы могут быть только локальными.</dd>
+        </dl>
+        <h2>Типы данных</h2>
+        <ol>
+            <li>
+                Примитивные типы:
+                <ul>
+                    <li><code>Boolean</code> &#8213; принимает одно из двух значений <code>True</code> либо <code>False</code>. Значения: 0, null, ‘’, “”, `` неявно преобразуются в <code>False</code>. <code>True</code> &#8213; это любое значение, отличное от нуля и пустой строки.</li>
+                    <li><code>String</code> &#8213; объект, описывающий массив символов.</li>
+                    <li><code>Number</code> &#8213; вещественное (дробное) число, которое является полным аналогом типа <code>double</code>. Все числовые литералы неявно преобразуются в <code>Number</code>.</li>
+                    <li><code>Bigint</code> &#8213; целое число неограниченных размеров.</li>
+                </ul>
+            </li>
+            <li>
+                Объекты
+                <ul>
+                    <li><code>Object</code> &#8213; </li>
+                    <li><code>Array</code> &#8213; </li>
+                    <li><code>Function</code> &#8213; </li>
+                    <li><code>Date</code> &#8213; </li>
+                    <li><code>Map</code> &#8213; </li>
+                    <li><code>Set</code> &#8213; </li>
+                    <li><code>RegExp</code> &#8213; регулярное выражение</li>
+                </ul>
+            </li>
+        </ol>
+    </details>
+    <h2>Вычисления</h2>
+    <ol>
+        <li><span id="factorialNumber">x</span>! = <span id="factorialValue">n</span></li>
+        <li><span id="number">x</span><sup><span id="degree">y</span></sup> = <span id="numberToDegree">x<sup>y</sup></span></li>
+        <li>Ряд Фибоначи до числа <span id="numberFibonacci">n</span>:<br><span id="seriesFibonacci">Ряд Фибоначчи</span></li>
+    </ol>
+    <script>
+        //alert("Hello!");
+        //var name=prompt("Введите ваше имя: ");
+        //alert(name);
+        //alert('Привет, ' + prompt("Введите Ваше имя: ") + '. We are glad to see you!');
+        //alert(`Привет ${prompt("Введите Ваше имя: ")}.\n Это интерполяция строк.`);
+        console.log("Информацию также можно выводить в консоль");
+        document.write("<h2>Вывод на экран</h2>");
+        {
+            let var1 = "Global variable";
+            //var var1 = "Глобальная переменная";
+        }
+        //document.write(var1);
+        document.write(5);
+        document.write(typeof (5));
+        let variable = +("5");
+        document.write(typeof (variable));
+        document.write("<hr>");
+        let a = '5' ** 3;
+        document.write(a);
+
+        /**************Нахождение факториала********************/
+
+        function findFactorials(factorial) {
+            if (factorial == 1) return 1;
+            if (factorial <= 0) return undefined;
+            return findFactorials(factorial - 1) * factorial;
+        }
+        var factorial = +prompt("Введите число, факториал которого следует найти:");
+        factorialNumber.innerHTML = factorial;
+        factorialValue.innerHTML = findFactorials(factorial);
+
+        /**************Нахождение степени********************/
+
+        function numToDeg(num, deg) {
+            if (deg == 0 && num != 0) return 1;
+            if (deg == 0 && num == 0) return undefined;
+            return num ** deg;
+        }
+        var num = +prompt("Введите число, которое следует возвести в степень:");
+        var deg = +prompt("Введите степень, в которую следует возвести число:");
+        number.innerHTML = num;
+        degree.innerHTML = deg;
+        numberToDegree.innerHTML = numToDeg(num, deg);
+
+        /**************Ряд Фибоначи********************/
+
+        function fibonacci(n)
+        {
+            if (n < 3) return 1;
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+        var numFibonacci = +prompt("Введите число, до которого следует вывести ряд Фибоначи:");
+        var i = 1;
+        var thisNumberFibonacci = 1;
+        var serFibonacci = "";
+        while (thisNumberFibonacci < numFibonacci)
+        {
+            thisNumberFibonacci = fibonacci(i);
+            if (thisNumberFibonacci > numFibonacci) break;
+            serFibonacci += fibonacci(i) + "...";
+            i++;
+        }
+        numberFibonacci.innerHTML = numFibonacci;
+        seriesFibonacci.innerHTML = serFibonacci;
+    </script>
+</body>
+</html>
