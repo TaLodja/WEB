@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="forms_and_events.css">
+    <title>Формы и события</title>
+</head>
+<body>
+    <h1>Формы и события</h1>
+    <details>
+        <summary>Простейшие задачи</summary>
+            <h2>Factorial</h2>
+            <div class="task">
+                <!--<div class="pair">
+            </div>-->
+                <label for="number">Введите целое число от 0 до 170:</label>
+                <input id="number" type="number" onchange="Factorial()">
+                <button onclick="Factorial()">Вычислить</button>
+            </div>
+            <div id="factorial-result" class="result"></div>
+            <!--<input id="factorial-result" class="result" type="text">-->
+            <hr>
+            <h2>Power</h2>
+            <div class="task">
+                <div class="pair-group">
+                    <label for="base">Введите основание степени:</label>
+                    <input id="base" type="number" value="1" onchange="Power()">
+                    <label for="power">Введите показатель степени:</label>
+                    <input id="power" type="number" value="1" onchange="Power()">
+                </div>
+                <button onclick="Power()">Вычислить</button>
+            </div>
+            <div id="power-result" class="result"></div>
+            <hr>
+            <h2>Fibonacci sequence</h2>
+            <div class="task">
+                <label for="max-number">Введите предел вывода ряда Фибоначчи:</label>
+                <input id="max-number" type="number" onchange="Fibonacci()" min="1">
+                <button onclick="Fibonacci()">Вывести ряд</button>
+            </div>
+            <label for="max-index">Количество выведенных элементов: </label>
+            <span id="max-index" type="number" onchange="Fibonacci()"></span>
+            <div id="fibonacci-result" class="result"></div>
+            <hr>
+    </details>
+
+    <div class="images-and-colors">
+        <div class="upload-image">
+            <div class="image-container">
+                <img alt="Фото студента" id="image">
+            </div>
+            <input type="file" id="image-file" onchange="setImage()">
+        </div>
+
+        <div class="colors">
+            <div class="select-color">
+                <label for="background-color">Цвет фона</label>
+                <input type="color" id="background-color" value="white" oninput="setBackgroundColor(event)">
+            </div>
+            <div class="select-color">
+                <label for="foreground-color">Цвет текста</label>
+                <input type="color" id="foreground-color" oninput="setForegroundColor()">
+            </div>
+        </div>
+    </div>
+    <script src="forms_and_events.js"></script>
+</body>
+</html>

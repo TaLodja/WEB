@@ -1,0 +1,76 @@
+﻿input, div, button 
+{
+    font-size: 24px;
+    width:50%;
+}
+
+input
+{
+    text-align:right;
+    display:inline-block;
+}
+
+.task 
+{
+    width: 80%;
+    display: flex;
+    align-items:center;
+}
+
+.result 
+{
+    max-width: 80%;
+}
+.pair-group
+{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+label
+{
+    width:50%;
+}
+
+.list-element 
+{
+    font-size:24px;
+}
+#factorial-result
+{
+    overflow:scroll;
+    width:100%;
+    word-break:break-all;
+}
+#max-index
+{
+    width:100px;
+    font-size:16px;
+}
+
+/*//////////////////////////////////////////////////*/
+
+.images-and-colors
+{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+.image-container
+{
+    border:solid 1px;
+    /*width:400px;
+    height:300px;*/
+}
+#image, .image-container
+{
+    width: 400px;
+    height: 300px;
+}
+.select-color
+{
+    display:flex;
+    justify-content:space-between;
+    margin:12px;
+}
