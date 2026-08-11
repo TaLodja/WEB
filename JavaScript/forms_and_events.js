@@ -80,9 +80,12 @@ function setColor(event)
     ===    возвраащет 'true' только в том случае, если совпадают как значения, так и типы
     -------------------------------
     */
+    document.body.style[(event.target.id === 'background-color' ? 'backgroundColor' : 'color')] = event.target.value;
+    /*
     if (event.target.id === "background-color")
         document.body.style.backgroundColor = event.target.value;
     else
         document.body.style.color = event.target.value;
+     */
     console.log(event.target.id);
 }
