@@ -1,8 +1,59 @@
-﻿input, div, button 
+﻿body, #switch-background 
+{
+    transition: color 3s, background-color 3s, background-image 3s;
+}
+.header 
+{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+#switch-background 
+{
+    --bg-size: 32px; /*Объявляем переменную*/
+    width: var(--bg-size);
+    height: var(--bg-size);
+    padding: 0 calc(var(--bg-size)/5);
+    background-size: var(--bg-size) var(--bg-size);
+    background-repeat: no-repeat;
+}
+.dark 
+{
+    background-color: #323232;
+    color: #C8C8C8;
+}
+
+    .dark #switch-background 
+    {
+        background-image: url("sun.png");
+        filter: brightness(0) invert(1);
+    }
+
+.light 
+{
+    background-color: white;
+    color: black;
+}
+
+    .light #switch-background 
+    {
+        background-image: url("moon.png");
+    }
+/* /////////////////////////////////////////////////// */
+
+#switch-background-container, #switch-background-container > div 
+{
+    display: flex;
+    padding: 0 8px;
+}
+
+/* //////////////////////////////////////////////////// */
+
+/*input, div, button 
 {
     font-size: 24px;
     width:50%;
-}
+}*/
 
 input
 {
@@ -73,4 +124,65 @@ label
     display:flex;
     justify-content:space-between;
     margin:12px;
+}
+
+/* ////////////////////////////////////////////// */
+
+#clock
+{
+    font-family: 'Digital-7 Mono';
+    width: 98%;
+    font-size: 48px;
+    text-align: center;
+}
+
+#clock-controls 
+{
+    font-size: 22px;
+    align-self: center;
+}
+
+/* ////////////////////////////////////////////// */
+
+#countdown-timer input {
+    font-size: 24px;
+}
+
+#display {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px 4px gray;
+}
+
+.time-block {
+    border: solid 3px;
+    border-radius: 10px;
+    width: 148px;
+    box-shadow: 0px 0px 25px 5px gray;
+}
+
+.time-unit {
+    font-size: 48px;
+    color: rgb(200,0,0);
+    height: 148px;
+    background-color: Highlight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-marker {
+    border: solid 1px;
+    background-color: darkred;
+    color: aliceblue;
+    text-align: center;
+}
+
+#construct {
+    width: 200px;
+    height: 200px;
+    border: solid 1px;
 }

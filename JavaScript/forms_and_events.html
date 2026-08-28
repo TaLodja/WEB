@@ -6,64 +6,138 @@
     <link rel="stylesheet" href="forms_and_events.css">
     <title>Формы и события</title>
 </head>
-<body>
+<body class="light">
+    <div class="header">
+        <div>Header</div>
+        <div id="mouse"></div>
+        <div id="switch-background-container">
+            <div id="debug-background"></div>
+            <div>
+                <label for="delay">Delay</label>
+                <input type="number" min="1" max="8" value=" 3" id="switch-background-delay">
+            </div>
+            <div id="switch-background"></div>
+        </div>
+    </div>
+    <hr>
+    <!-- ----------------------------------------------------------------------------------- -->
     <h1>Формы и события</h1>
     <details>
         <summary>Простейшие задачи</summary>
-            <h2>Factorial</h2>
-            <div class="task">
-                <!--<div class="pair">
+        <h2>Factorial</h2>
+        <div class="task">
+            <!--<div class="pair">
             </div>-->
-                <label for="number">Введите целое число от 0 до 170:</label>
-                <input id="number" type="number" onchange="Factorial()">
-                <button onclick="Factorial()">Вычислить</button>
-            </div>
-            <div id="factorial-result" class="result"></div>
-            <!--<input id="factorial-result" class="result" type="text">-->
-            <hr>
-            <h2>Power</h2>
-            <div class="task">
-                <div class="pair-group">
-                    <label for="base">Введите основание степени:</label>
-                    <input id="base" type="number" value="1" onchange="Power()">
-                    <label for="power">Введите показатель степени:</label>
-                    <input id="power" type="number" value="1" onchange="Power()">
-                </div>
-                <button onclick="Power()">Вычислить</button>
-            </div>
-            <div id="power-result" class="result"></div>
-            <hr>
-            <h2>Fibonacci sequence</h2>
-            <div class="task">
-                <label for="max-number">Введите предел вывода ряда Фибоначчи:</label>
-                <input id="max-number" type="number" onchange="Fibonacci()" min="1">
-                <button onclick="Fibonacci()">Вывести ряд</button>
-            </div>
-            <label for="max-index">Количество выведенных элементов: </label>
-            <span id="max-index" type="number" onchange="Fibonacci()"></span>
-            <div id="fibonacci-result" class="result"></div>
-            <hr>
-    </details>
-
-    <div class="images-and-colors">
-        <div class="upload-image">
-            <div class="image-container">
-                <img alt="Фото студента" id="image">
-            </div>
-            <input type="file" id="image-file" onchange="setImage()">
+            <label for="number">Введите целое число от 0 до 170:</label>
+            <input id="number" type="number" onchange="Factorial()">
+            <button onclick="Factorial()">Вычислить</button>
         </div>
+        <div id="factorial-result" class="result"></div>
+        <!--<input id="factorial-result" class="result" type="text">-->
+        <hr>
+        <h2>Power</h2>
+        <div class="task">
+            <div class="pair-group">
+                <label for="base">Введите основание степени:</label>
+                <input id="base" type="number" value="1" onchange="Power()">
+                <label for="power">Введите показатель степени:</label>
+                <input id="power" type="number" value="1" onchange="Power()">
+            </div>
+            <button onclick="Power()">Вычислить</button>
+        </div>
+        <div id="power-result" class="result"></div>
+        <hr>
+        <h2>Fibonacci sequence</h2>
+        <div class="task">
+            <label for="max-number">Введите предел вывода ряда Фибоначчи:</label>
+            <input id="max-number" type="number" onchange="Fibonacci()" min="1">
+            <button onclick="Fibonacci()">Вывести ряд</button>
+        </div>
+        <label for="max-index">Количество выведенных элементов: </label>
+        <span id="max-index" type="number" onchange="Fibonacci()"></span>
+        <div id="fibonacci-result" class="result"></div>
+        <hr>
+    </details>
+    <!-- ------------------------------------------------------------------------------- -->
+    <details>
+        <summary>Фото и цвета</summary>
+        <div class="images-and-colors">
+            <div class="upload-image">
+                <div class="image-container">
+                    <img alt="Фото студента" id="image">
+                </div>
+                <input type="file" id="image-file" onchange="setImage()">
+            </div>
 
-        <div class="colors">
-            <div class="select-color">
-                <label for="background-color">Цвет фона</label>
-                <input type="color" id="background-color" value="white" oninput="setColor(event)">
+            <div class="colors">
+                <div class="select-color">
+                    <label for="background-color">Цвет фона</label>
+                    <input type="color" id="background-color" value="white" oninput="setColor(event)">
+                </div>
+                <div class="select-color">
+                    <label for="foreground-color">Цвет текста</label>
+                    <input type="color" id="foreground-color" oninput="setColor(event)">
+                </div>
             </div>
-            <div class="select-color">
-                <label for="foreground-color">Цвет текста</label>
-                <input type="color" id="foreground-color" oninput="setColor(event)">
+        </div>
+    </details>
+    <!-- -------------------------------------------------------------------------------- -->
+    <details>
+        <summary>Дата и время</summary>
+        <h2 id="raw-date"></h2>
+        <div id="clock">
+            <h2>Time</h2>
+            <div id="current-time">
+                <span id="hours"></span> :
+                <span id="minutes"></span> :
+                <span id="seconds"></span>
             </div>
+            <div id="current-date">
+                <span id="years"></span>.
+                <span id="months"></span>.
+                <span id="days"></span>
+            </div>
+            <div id="day-of-week"></div>
+            <div id="clock-controls">
+                <input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
+                <input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
+            </div>
+        </div>
+    </details>
+    <!-- ------------------------------------------------------------------------------ -->
+    <div id="countdown-timer">
+        <h2>Countdown timer</h2>
+        <input type="date" id="target-date" value="2026-08-01">
+        <input type="time" id="target-time" value="22:00">
+        <input type="button" id="btn-start" value="Start">
+    </div>
+    <div id="debug">
+        <div id="target-date-value"></div>
+        <div id="target-time-value"></div>
+        <div id="current-time-value"></div>
+        <div id="timezone"></div>
+        <div id="timestamp"></div>
+        <div id="duration"></div>
+    </div>
+    <div id="display">
+        <div class="time-block">
+            <div id="hours-unit" class="time-unit"></div>
+            <div id="hours-marker" class="time-marker">Hours</div>
+        </div>
+        <div class="time-block">
+            <div id="minutes-unit" class="time-unit"></div>
+            <div id="minutes-marker" class="time-marker">Minutes</div>
+        </div>
+        <div class="time-block">
+            <div id="seconds-unit" class="time-unit"></div>
+            <div id="seconds-marker" class="time-marker">Seconds</div>
         </div>
     </div>
+    <ol id="construct">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
     <script src="forms_and_events.js"></script>
 </body>
 </html>
